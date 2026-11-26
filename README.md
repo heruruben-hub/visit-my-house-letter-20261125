@@ -38,10 +38,12 @@ and a view — and makes saying yes feel easy.
 
 ## How it works
 
-`main.py` draws the whole image with Pillow (Python 3): cream paper with a
-gold border, the little house scene at the top, then the letter in large
-legible DejaVu Serif. Everything is drawn in code — no image files are
-read in — so the program is deterministic and self-contained.
+`main.py` draws the whole image with only the Python standard library:
+cream paper with a gold border, the little house scene at the top, then
+the letter set in a hand-made 5x7 bitmap face. The picture is built
+pixel by pixel into a framebuffer and the PNG is encoded by hand with
+`zlib`. Everything is drawn in code — no image files are read in, no
+fonts are loaded — so the program is deterministic and self-contained.
 
 ## Run
 
